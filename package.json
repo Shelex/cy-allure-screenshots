@@ -1,0 +1,30 @@
+{
+  "name": "cy-allure-screenshots",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Shelex/cy-allure-screenshots.git",
+  "author": "<ovr.shevtsov@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cypress": "^4.0.0",
+    "klaw-sync": "^6.0.0",
+    "allure-mocha": "^2.0.0-beta.6",
+    "mocha": "^7.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-chai-friendly": "^0.5.0",
+    "eslint-plugin-cypress": "^2.9.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "mocha": "^7.0.1",
+    "prettier": "^1.19.1"
+  },
+  "scripts": {
+    "cy:open": "yarn cypress open",
+    "cy:run": "yarn cypress run --config video=false --browser chrome --reporter allure-mocha",
+    "allure:report": "allure generate allure-results --clean -o allure-report",
+    "allure:attachments": "node cypress/scripts/attachAllureScreenshots",
+    "allure:cleanup": "rm -rf allure-report && rm -rf allure-results"
+  }
+}
