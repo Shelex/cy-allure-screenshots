@@ -1,3 +1,5 @@
+# Deprecated. Check [cypress-allure-plugin](https://github.com/Shelex/cypress-allure-plugin)
+
 ## Example how to add screenshots to allure-results
 
 ### Pre-requisites
